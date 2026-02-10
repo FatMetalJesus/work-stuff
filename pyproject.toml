@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omni-recover-studio"
+version = "0.1.0"
+description = "Cross-platform all-in-one forensic-style data recovery desktop suite"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Omni Recover Studio"}]
+dependencies = []
+
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.0"]
+
+[project.scripts]
+omni-recover-studio = "omni_recover_studio.main:main"
+omni-recover-companion = "omni_recover_studio.companion:companion_main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools.package-data]
+omni_recover_studio = ["companion_ui/*.html", "companion_ui/*.css", "companion_ui/*.js"]

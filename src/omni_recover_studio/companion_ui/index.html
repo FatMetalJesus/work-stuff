@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Omni Recover Companion</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Omni Recover Companion</h1>
+      <p>Review your recovery cases from any phone on your local network.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <label for="token">API token (optional)</label>
+        <input id="token" placeholder="token" />
+        <button id="reloadCases">Reload Cases</button>
+      </section>
+
+      <section class="panel">
+        <h2>Cases</h2>
+        <ul id="cases"></ul>
+      </section>
+
+      <section class="panel">
+        <h2 id="filesTitle">Files</h2>
+        <input id="search" placeholder="Search file path" />
+        <button id="searchBtn">Search</button>
+        <div id="filesMeta"></div>
+        <ul id="files"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
